@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* ปิดการเลื่อนในแกน X */
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Top bar */
+.top-bar {
+  background: rgba(17, 17, 17, 0.17);
+  display: flex;
+  justify-content: space-between; /* จัดกลาง */
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  position: fixed;
+  top: 0; /* ติดที่ด้านบนของหน้าจอ */
+  z-index: 1000; /* ทำให้แน่ใจว่ามันอยู่เหนือทุกอย่าง */
+}
+.portfolio-title {
+    font-size: 18px;
+    color: #CA1A27;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงอย่างราบรื่น */
+}
+
+/* เปลี่ยนเมนูที่ active */
+.menu a.active {
+    color: #CA1A27;
+    border-bottom: 3px solid #CA1A27; /* เส้นขอบด้านล่างด้วยสี CA1A27 */
+}
+
+/* เมนูเมื่อมีการ hover */
+.menu a:hover {
+    color: #CA1A27;
+    border-bottom: 3px solid #CA1A27; /* เส้นขอบด้านล่างด้วยสี CA1A27 */
+}
+.menu.show {
+  display: block; /* แสดงเมนูเมื่อมีคลาส .show */
+}
+
+/* เมนูแฮมเบอร์เกอร์ */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Home section styles */
+.home-section {
+    position: relative; /* ให้ตำแหน่งที่สัมพันธ์กับภาพ */
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกไป */
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.full-width-img {
+    width: 100%; /* ให้ภาพกว้าง 100% ของพื้นที่ที่มี */
+    height: auto; /* ให้ความสูงของภาพปรับตามอัตราส่วน */
+    display: block; /* กำหนดให้เป็นบล็อกเพื่อกำจัดระยะห่างด้านล่าง */
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; /* ปรับความสูงให้เหมาะสม */
+    min-height: 870px; /* ความสูงขั้นต่ำเพื่อไม่ให้ยุบลงไป */
+    position: relative;
+    background-color: white;
+    overflow: visible; /* ทำให้สามารถเห็นส่วนที่เกินของรูปภาพ */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+.about-content {
+    display: flex; /* จัดเรียงรูปภาพและข้อความในแนวนอน */
+    padding: 0 20px;
+    gap: 20px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
+    width: 100%; /* ให้เนื้อหาครอบคลุม 100% */
+    align-items: center; /* จัดกลาง */
+}
+
+.about-image {
+    width: 100%; /* ความกว้างของรูปภาพปรับตามขนาดหน้าจอ */
+    max-width: 631px; /* กำหนดความกว้างสูงสุด */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วน */
+    object-fit: cover; /* ให้รูปภาพเติมเต็มพื้นที่ */
+    position: relative; /* ใช้ตำแหน่ง relative */
+    top: -50px; /* เลื่อนรูปภาพขึ้นเพื่อทับคอนเทนต์ด้านบน */
+    z-index: 1; /* ให้รูปภาพอยู่เหนือคอนเทนต์อื่น */
+}
+
+.about-text {
+  width: 100%; /* ปรับความกว้างของข้อความ */
+  max-width: 670px; /* กำหนดความกว้างสูงสุด */
+  height: auto; /* ความสูงของข้อความปรับตามขนาด */
+  display: flex; /* จัดข้อความในแนวนอน */
+  flex-direction: column; /* ทำให้ข้อความเรียงในแนวตั้ง */
+  justify-content: flex-start; /* จัดข้อความไปที่ด้านบน */
+  opacity: 1; /* ให้เห็นข้อความ */
+  margin-top: 0; /* ลบระยะห่างด้านบน */
+}
+.skills-section {
+  margin-top: 20px;
+  background-color: white;
+  align-items: center;       
+  text-align: center;  
+  padding:20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  text-align: left;
+  color: black;
+  font-size: 2vw;
+}
+
+.percent-bar {
+  background-color: #ACAEB1;
+  border-radius: 20px;
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+
+.percent-fill {
+  background-color: #CA1A27;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent-text {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.contact-section img{
+  width: 100%; /* ให้ภาพกว้าง 100% ของพื้นที่ที่มี */
+  height: auto; /* ให้ความสูงของภาพปรับตามอัตราส่วน */
+  display: block; /* กำหนดให้เป็นบล็อกเพื่อกำจัดระยะห่างด้านล่าง */
+}
+.contact-section div {
+  padding-top: 50px;
+  padding-left: 20px;
+  gap: 50px;
+  position: absolute; /* ทำให้ไอคอนและข้อความทับภาพ */
+  color: white; /* สีของข้อความ */
+  z-index: 1; /* ให้แสดงอยู่เหนือภาพ */
+  display: flex; /* ทำให้แสดงเป็น flex container */
+  flex-direction: column; /* ให้เรียงแนวตั้ง */
+}
+
+.contact-section i {
+  margin-bottom: 10px; /* ระยะห่างระหว่างไอคอน */
+  font-size: 3vw; /* ขนาดของไอคอน */
+}
+
+.contact-section a {
+  color: white; /* เปลี่ยนสีลิงก์ */
+  text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+  font-size: 2vw; /* ขนาดของไอคอน */
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.contact-section a:hover {
+  text-decoration: underline; /* เพิ่มขีดเส้นใต้เมื่อ hover */
+}
+/* ปุ่ม See More */
+#see-more-button {
+  position: fixed; /* ทำให้ปุ่มอยู่ที่ตำแหน่งคงที่ */
+  right: 20px; /* ระยะห่างจากขอบขวาของหน้าจอ */
+  top: 50%; /* อยู่กลางในแนวตั้ง */
+  transform: translateY(-50%); /* ปรับตำแหน่งให้ถูกต้อง */
+  background-color: #007bff; /* สีพื้นหลังของปุ่ม */
+  color: white; /* สีของข้อความ */
+  border: none; /* ไม่มีกรอบ */
+  padding: 10px 15px; /* ระยะห่างภายใน */
+  border-radius: 5px; /* มุมโค้ง */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อชี้ที่ปุ่ม */
+  z-index: 1000; /* ให้ปุ่มอยู่เหนือเนื้อหาอื่น ๆ */
+}
+
+.popup {
+  display: none; /* ซ่อนป๊อปอัพเริ่มต้น */
+  position: fixed; /* ทำให้ป๊อปอัพอยู่ที่ตำแหน่งคงที่ */
+  left: 0;
+  top: 0;
+  width: 100%; /* ความกว้างเต็มหน้าจอ */
+  height: 100%; /* ความสูงเต็มหน้าจอ */
+  background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลังโปร่งแสง */
+  z-index: 999; /* ให้ป๊อปอัพอยู่เหนือเนื้อหาอื่น ๆ */
+}
+
+.popup-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* จัดให้เนื้อหาอยู่กลาง */
+  background-color: #181818; /* สีพื้นหลังของเนื้อหา */
+  padding: 50px; /* ระยะห่างภายใน */
+  border-radius: 5px; /* มุมโค้ง */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* เงา */
+  display: flex; /* ใช้ flexbox */
+  flex-direction: column; /* ให้เนื้อหาเรียงในแนวตั้ง */
+  align-items: center; /* จัดแนวเนื้อหาตรงกลางในแนวนอน */
+  min-width: 200px; /* กำหนดความกว้างขั้นต่ำ */
+  min-height: 100px; /* กำหนดความสูงขั้นต่ำ */
+  max-width: 90%; /* ความกว้างสูงสุดเพื่อให้ไม่เกินขอบจอ */
+  gap: 20px;
+}
+
+.popup-content h1{
+  font-size: 4vw;
+  color: white;
+}
+
+.popup-content a{
+  font-size: 2vw;
+  color: #CA1A27;
+  text-decoration: none;
+  border: 2px solid white;
+  background: black;
+  padding: 10px;
+  border-radius: 8px;
+}
+.popup-content a:hover {
+  color: white;
+  border: 2px solid #CA1A27;
+  background: #CA1A27;
+}
+
+.assignment-page {
+  position: relative; /* ตั้งตำแหน่งให้กับ div นี้ */
+  width: 100vw; /* ความกว้างเต็มหน้าจอ */
+  height: 100vh; /* ความสูงเต็มหน้าจอ */
+  overflow: hidden; /* ซ่อนส่วนที่เกิน */
+}
+.full-width-img2 {
+  width: 100%; /* ให้ภาพกว้าง 100% ของพื้นที่ที่มี */
+  height: auto; /* ให้ความสูงของภาพปรับตามอัตราส่วน */
+  display: block; /* กำหนดให้เป็นบล็อกเพื่อกำจัดระยะห่างด้านล่าง */
+  overflow: hidden; /* ซ่อนพื้นที่ที่เกิน */
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none; /* ซ่อนเมนูในโทรศัพท์ */
+        flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+        position: absolute; /* ทำให้เมนูแสดงซ้อนทับ */
+        background: rgba(17, 17, 17, 0.88); /* ปรับสีพื้นหลัง */
+        top: 60px; /* ปรับตำแหน่ง */
+        right: 20px; /* ปรับตำแหน่ง */
+        width: 150px; /* กำหนดความกว้าง */
+        border-radius: 5px; /* มุมโค้ง */
+        z-index: 10; /* ให้แสดงอยู่ด้านบน */
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .menu.show {
+        display: flex; /* แสดงเมนูเมื่อมีคลาส show */
+    }
+
+    .menu-toggle {
+        display: block; /* แสดงไอคอนแฮมเบอร์เกอร์ */
+    }
+
+    .menu li {
+        margin: 5px 0; /* ระยะห่างระหว่างรายการ */
+    }
+
+    .about-image {
+        display: none; /* ซ่อนรูปภาพเมื่อหน้าจอเล็กกว่า 768px */
+    }
+
+    .menu a.active {
+        border-bottom: none; /* ซ่อนเส้นขอบด้านล่างเมื่อหน้าจอเล็กกว่า 768px */
+    }
+}
+@media (max-width: 1024px) {
+  .full-width-img2 {
+    position: absolute; /* ตั้งตำแหน่งให้เป็น absolute */
+    top: 0; /* ชิดด้านบน */
+    left: 0; /* ชิดด้านซ้าย */
+    width: 100%; /* ความกว้างเต็ม */
+    height: 100%; /* ความสูงเต็ม */
+    object-fit: cover; /* ให้ภาพขยายเต็มพื้นที่ โดยคงอัตราส่วน */
+}
+}
+

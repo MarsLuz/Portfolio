@@ -1,0 +1,81 @@
+/* ตั้งค่าทั่วไปของหน้า */
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ตกแต่งฟอร์ม */
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+/* ตกแต่ง legend */
+legend {
+    font-size: 1.5em;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+/* ตกแต่ง input field */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* ปุ่ม submit และ reset */
+input[type="submit"], input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input[type="reset"] {
+    background-color: #f44336;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    opacity: 0.9;
+}
+
+/* ลิงก์ไปหน้า Register */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* จัดระยะห่างระหว่างปุ่มกับลิงก์ */
+form fieldset {
+    border: none;
+    padding: 0;
+}
+
+form a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}

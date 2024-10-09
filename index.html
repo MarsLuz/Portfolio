@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p class="portfolio-title">Portfolio</p>
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- แฮมเบอร์เกอร์ ไอคอน -->
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="AssignmentPage.html">Assignments</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <section id="home" class="home-section">
+            <img src="image/mark2.png" alt="Home Image" class="full-width-img">
+        </section>
+        <section id="about" class="about-section">
+          <div class="about-content">
+              <img src="image/profile.jpg" alt="About Me Image" class="about-image">
+              <div class="about-text">
+                <div style="
+                    display: flex;
+                    font-size: 4vw;
+                    gap: 20px;
+                ">
+                    <h2>About</h2>
+                    <h2 style="color: red;">Me</h2>
+                </div>
+                  <p style="font-size: 2vw;">Hello, my name is Worapong Sirilertpitak,
+                     but you can call me Mark. In my free time, 
+                     I enjoy playing basketball, gaming, exercising, and taking photos. 
+                     I’m particularly interested in business and official matters"
+                  </p>
+              </div>
+          </div>
+      </section>
+      
+        <section id="skills" class="skills-section">
+            <div>
+                <div class="skill">
+                    <p>Adobe</p>
+                    <div class="percent-bar">
+                        <div class="percent-fill" style="width: 70%;">
+                            <span class="percent-text">74.34%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Unity</p>
+                    <div class="percent-bar">
+                        <div class="percent-fill" style="width: 60%;">
+                            <span class="percent-text">85%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>C#</p>
+                    <div class="percent-bar">
+                        <div class="percent-fill" style="width: 80%;">
+                            <span class="percent-text">60%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Canva</p>
+                    <div class="percent-bar">
+                        <div class="percent-fill" style="width: 80%;">
+                            <span class="percent-text">95.67%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <div>
+                <i class="fa-brands fa-facebook">
+                    <a href="https://www.facebook.com/markskytr/">มาร์ค ค</a>
+                </i>
+                <i class="fa-brands fa-instagram">
+                    <a href="https://www.instagram.com/_m1rk/">_m1rk</a>
+                </i>
+                <i class="fa-solid fa-envelope">
+                    <a href="mailto:markskytr@gmail.com">markskytr@gmail.com</a>
+                </i>
+            </div>
+            <img src="image/mark3.png" alt="mark3">
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

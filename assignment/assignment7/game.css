@@ -1,0 +1,46 @@
+#container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* จัดให้อยู่กลางแนวตั้ง */
+}
+
+#layer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+}
+
+.square {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 3px solid black;
+}
+
+.maroon {
+    background-color: maroon; 
+}
+.lightgreen {
+    background-color: lightgreen; 
+}
+.magenta {
+    background-color: magenta; 
+}
+body {
+    background-color: #ffe0e0; /* พื้นหลังสีอ่อน */
+    font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ */
+}
+fieldset {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px; /* มุมโค้งมน */
+    background-color: #fff; /* พื้นหลังสีขาว */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em; /* ขนาดฟอนต์ที่ใหญ่ขึ้น */
+}

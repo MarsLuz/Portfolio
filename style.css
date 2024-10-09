@@ -309,7 +309,8 @@ body {
     }
 
     .about-image {
-        display: none; /* ซ่อนรูปภาพเมื่อหน้าจอเล็กกว่า 768px */
+         justify-content: center;
+    align-items: center;
     }
 
     .menu a.active {
